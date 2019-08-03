@@ -56,14 +56,27 @@ public class CharacterController : MonoBehaviour
     {
         rigidbody.velocity += (Input.GetAxisRaw("Horizontal") * transform.right * horizontalSpeed) * Time.deltaTime;
 
-        if(rigidbody.velocity.x > minRotationInput)
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, -rotationMaxAngle, 0f), rotationSpeed);
+        if(Input.GetAxis("Horizontal") != 0)
+        {
+            if (Input.GetAxis("Horizontal") > 0f)
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, -rotationMaxAngle, 0f), rotationSpeed);
 
-        else if (rigidbody.velocity.x < -minRotationInput)
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, rotationMaxAngle, 0f), rotationSpeed);
+            else if (Input.GetAxis("Horizontal") < 0f)
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, rotationMaxAngle, 0f), rotationSpeed);
 
-        else transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, 0f), rotationSpeed);
+            else transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, 0f), rotationSpeed);
+        }
 
+        else
+        {
+            if (rigidbody.velocity.x > minRotationInput)
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, -rotationMaxAngle, 0f), rotationSpeed);
+
+            else if (rigidbody.velocity.x < -minRotationInput)
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, rotationMaxAngle, 0f), rotationSpeed);
+
+            else transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, 0f), rotationSpeed);
+        }
     }
 
     void JetPackMovement()
