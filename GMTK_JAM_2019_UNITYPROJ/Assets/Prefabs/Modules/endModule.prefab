@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8275133993560030673}
   - component: {fileID: 5072369407685645067}
   - component: {fileID: 8947257115946365020}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: endModule
-  m_TagString: Untagged
+  m_TagString: KillsPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

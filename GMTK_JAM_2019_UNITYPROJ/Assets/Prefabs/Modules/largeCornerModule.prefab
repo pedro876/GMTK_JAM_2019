@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3237082106540641669}
   - component: {fileID: 8296172668156079837}
   - component: {fileID: -7825883475675536193}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: largeCornerModule
-  m_TagString: Untagged
+  m_TagString: KillsPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

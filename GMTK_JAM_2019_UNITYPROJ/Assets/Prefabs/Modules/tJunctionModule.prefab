@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1178648186969399190}
   - component: {fileID: 8296172668639728504}
   - component: {fileID: 1530522903016539483}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: tJunctionModule
-  m_TagString: Untagged
+  m_TagString: KillsPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
