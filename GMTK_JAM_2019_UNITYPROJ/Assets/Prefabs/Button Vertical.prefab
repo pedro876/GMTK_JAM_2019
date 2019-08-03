@@ -14431,6 +14431,7 @@ GameObject:
   - component: {fileID: 2698248398491679769}
   - component: {fileID: 2698248398491679770}
   - component: {fileID: 2698248398491679771}
+  - component: {fileID: 3758005730739995135}
   m_Layer: 9
   m_Name: buttonBase_prefab
   m_TagString: Untagged
@@ -14590,6 +14591,25 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!95 &3758005730739995135
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2698248398491679773}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d5cf77fe866862b4b82625bdaf13c837, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2698248398746014481
 GameObject:
   m_ObjectHideFlags: 0
