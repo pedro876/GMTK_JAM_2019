@@ -99,13 +99,13 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetButton("Jump"))
         {
-            foreach(ParticleSystem jetPackVFX in jetPackVFXs)
-                if(!jetPackVFX.isPlaying) jetPackVFX.Play();
-
             jetPackElapsedTime = Time.time - jetPackStartTime;
 
             if (jetPackElapsedTime < jetPackCurrentFuelTime)
             {
+                foreach (ParticleSystem jetPackVFX in jetPackVFXs)
+                    if (!jetPackVFX.isPlaying) jetPackVFX.Play();
+
                 rigidbody.velocity += transform.up * jetPackSpeed * Time.deltaTime;
                 UpdateFuelUI();
             }
