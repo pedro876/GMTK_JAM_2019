@@ -14,12 +14,16 @@ public class CharacterController : MonoBehaviour
     float jetPackStartTime = 0f;
     float jetPackElapsedTime = 0f;
 
+    float defaultMass = 0f;
+
     Rigidbody rigidbody;
 
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         gameObject.tag = "Player";
+
+        defaultMass = rigidbody.mass;
 
         jetPackCurrentFuelTime = jetPackFuelTime;
     }
@@ -42,7 +46,7 @@ public class CharacterController : MonoBehaviour
         if (Input.GetButton("Jump"))
         {
             jetPackElapsedTime = Time.time - jetPackStartTime;
-            Debug.Log(jetPackElapsedTime);
+            
             if (jetPackElapsedTime < jetPackCurrentFuelTime)
                 rigidbody.velocity += transform.up * jetPackSpeed * Time.deltaTime;
         }
@@ -52,10 +56,21 @@ public class CharacterController : MonoBehaviour
             jetPackCurrentFuelTime -= jetPackElapsedTime;
             jetPackElapsedTime = 0f;
         }
+
+        Debug.Log(jetPackCurrentFuelTime);
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Surfboard") jetPackCurrentFuelTime = jetPackFuelTime;
+        if (collision.gameObject.tag == "Surfboard")
+        {
+            jetPackCurrentFuelTime = jetPackFuelTime;
+            rigidbody.mass = 0f;
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Surfboard") rigidbody.mass = defaultMass;
     }
 }
