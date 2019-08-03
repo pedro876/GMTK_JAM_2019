@@ -20,5 +20,4 @@ public class Portal : MonoBehaviour
     {
         canTeleport = true;
     }
-
 }

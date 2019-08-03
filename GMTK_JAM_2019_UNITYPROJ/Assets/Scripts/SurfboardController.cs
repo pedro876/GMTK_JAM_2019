@@ -8,7 +8,7 @@ public class SurfboardController : MonoBehaviour
 
     [SerializeField][Tooltip("Fuerza con la que la tabla va hacia el cursor")] float force = 1.0f;
     [SerializeField][Tooltip("Porcentaje de velocidad que pierde la tabla cada frame")] float decelerationFactor = 0.1f;
-    //[SerializeField][Tooltip("Velocidad tope de la tabla")] float topSpeed = 10;
+    [SerializeField][Tooltip("Velocidad tope de la tabla")] float topSpeed = 10;
 
     Vector3 mouseVector = Vector3.zero;
 
@@ -33,11 +33,7 @@ public class SurfboardController : MonoBehaviour
 
         rigidbody.velocity -= rigidbody.velocity * decelerationFactor;
 
-        /*if (rigidbody.velocity.magnitude > topSpeed)
-        {
+        if (rigidbody.velocity.magnitude > topSpeed)
             rigidbody.velocity = rigidbody.velocity.normalized * topSpeed;
-        }
-        */
-
     }
 }
