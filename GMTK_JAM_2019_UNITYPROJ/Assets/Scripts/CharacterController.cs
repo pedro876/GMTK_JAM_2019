@@ -5,6 +5,13 @@ using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour
 {
+    [SerializeField] ParticleSystem deathVFX;
+    [SerializeField] ParticleSystem [] jetPackVFXs;
+    [Space]
+
+    [HideInInspector] public static bool canWin = false;
+    [HideInInspector] public static bool canMove = true;
+
     [SerializeField][Tooltip("Velocidad de movimiento horizontal")] float horizontalSpeed = 2.0f;
     [SerializeField] [Tooltip("Velocidad mínima que debe llevar para empezar a girar")] float minRotationInput = 0.5f;
     [Space]
@@ -28,15 +35,17 @@ public class CharacterController : MonoBehaviour
     float defaultMass = 0f;
 
     Rigidbody rigidbody;
-
+    SceneTransitionManager sceneTransition;
     SurfboardController surfboard;
 
 
     void Start()
     {
         gameObject.tag = "Player";
+        
         surfboard = FindObjectOfType<SurfboardController>();
         rigidbody = GetComponent<Rigidbody>();
+        sceneTransition = FindObjectOfType<SceneTransitionManager>();
 
         fuelBarUIDefaultHeight = jetPackFuelBarUI.rectTransform.sizeDelta.y;
 
@@ -44,12 +53,17 @@ public class CharacterController : MonoBehaviour
 
         jetPackCurrentFuelTime = jetPackFuelTime;
         fuelBarUICurrentHeight = fuelBarUIDefaultHeight;
+
+        canWin = false;
     }
 
     void Update()
     {
-        HorizontalMovement();
-        JetPackMovement();
+        if (canMove)
+        {
+            HorizontalMovement();
+            JetPackMovement();
+        }
     }
 
     void HorizontalMovement()
@@ -89,6 +103,9 @@ public class CharacterController : MonoBehaviour
 
             if (jetPackElapsedTime < jetPackCurrentFuelTime)
             {
+                foreach (ParticleSystem jetPackVFX in jetPackVFXs)
+                    if (!jetPackVFX.isPlaying) jetPackVFX.Play();
+
                 rigidbody.velocity += transform.up * jetPackSpeed * Time.deltaTime;
                 UpdateFuelUI();
             }
@@ -96,6 +113,9 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetButtonUp("Jump"))
         {
+            foreach (ParticleSystem jetPackVFX in jetPackVFXs)
+                jetPackVFX.Stop();
+
             jetPackCurrentFuelTime -= jetPackElapsedTime;
             fuelBarUICurrentHeight = jetPackFuelBarUI.rectTransform.sizeDelta.y;
         }
@@ -106,17 +126,29 @@ public class CharacterController : MonoBehaviour
         jetPackFuelBarUI.rectTransform.sizeDelta = new Vector2(jetPackFuelBarUI.rectTransform.sizeDelta.x, Mathf.Lerp(fuelBarUICurrentHeight, 0f, jetPackElapsedTime/jetPackCurrentFuelTime));
     }
 
+    void RechargeJetPack()
+    {
+        jetPackCurrentFuelTime = jetPackFuelTime;
+
+        jetPackFuelBarUI.rectTransform.sizeDelta = new Vector2(jetPackFuelBarUI.rectTransform.sizeDelta.x, fuelBarUIDefaultHeight);
+        fuelBarUICurrentHeight = jetPackFuelBarUI.rectTransform.sizeDelta.y;
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Surfboard")
         {
-            jetPackCurrentFuelTime = jetPackFuelTime;
-
-            jetPackFuelBarUI.rectTransform.sizeDelta = new Vector2(jetPackFuelBarUI.rectTransform.sizeDelta.x, fuelBarUIDefaultHeight);
-            fuelBarUICurrentHeight = jetPackFuelBarUI.rectTransform.sizeDelta.y;
+            RechargeJetPack();
 
             rigidbody.mass = 0f;
+
+            if (canWin)
+            {
+                sceneTransition.LoadNextScene();
+            }
         }
+
+        else if (collision.gameObject.tag == "KillsPlayer") DeathSequence();
     }
 
     void OnCollisionExit(Collision collision)
@@ -126,13 +158,29 @@ public class CharacterController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Portal")
-        {
-            jetPackCurrentFuelTime = jetPackFuelTime;
+        if (other.gameObject.tag == "Portal") RechargeJetPack();
 
-            jetPackFuelBarUI.rectTransform.sizeDelta = new Vector2(jetPackFuelBarUI.rectTransform.sizeDelta.x, fuelBarUIDefaultHeight);
-            fuelBarUICurrentHeight = jetPackFuelBarUI.rectTransform.sizeDelta.y;
+        else if(other.gameObject.tag == "Goal")
+        {
+            canWin = true;
+            Destroy(other.gameObject);
         }
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        if (other.gameObject.tag == "KillsPlayer") DeathSequence();
+    }
+
+    void DeathSequence()
+    {
+        Instantiate(deathVFX, transform.position, Quaternion.identity);
+        Instantiate(deathVFX, transform.position, Quaternion.identity);
+
+        sceneTransition.ReloadScene();
+
+        Destroy(surfboard.gameObject);
+        Destroy(gameObject);
     }
 
 }
