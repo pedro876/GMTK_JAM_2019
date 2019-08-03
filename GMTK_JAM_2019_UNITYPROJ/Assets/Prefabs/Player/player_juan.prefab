@@ -844,9 +844,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d4c846de65f3340831613e36308524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 8
+  horizontalSpeed: 10
+  minRotationInput: 0.5
   jetPackSpeed: 20
   jetPackFuelTime: 3
+  jetPackFuelBarUI: {fileID: 0}
   rotationMaxAngle: 20
   rotationSpeed: 1
 --- !u!1 &4523704374345642880
