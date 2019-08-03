@@ -8,6 +8,9 @@ public class ForceField : MonoBehaviour
 
     void Awake()
     {
-        Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), objectToIgnore.GetComponent<Collider>());
+        Collider[] colliders = objectToIgnore.GetComponents<Collider>();
+
+        foreach (Collider collider in colliders)
+            Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), collider);
     }
 }
