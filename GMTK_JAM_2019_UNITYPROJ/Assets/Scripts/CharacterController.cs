@@ -18,8 +18,12 @@ public class CharacterController : MonoBehaviour
 
     Rigidbody rigidbody;
 
+    SurfboardController surfboard;
+
     void Start()
     {
+        surfboard = FindObjectOfType<SurfboardController>();
+
         rigidbody = GetComponent<Rigidbody>();
         gameObject.tag = "Player";
 
@@ -28,7 +32,7 @@ public class CharacterController : MonoBehaviour
         jetPackCurrentFuelTime = jetPackFuelTime;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         HorizontalMovement();
         JetPackMovement();
@@ -56,12 +60,11 @@ public class CharacterController : MonoBehaviour
             jetPackCurrentFuelTime -= jetPackElapsedTime;
             jetPackElapsedTime = 0f;
         }
-
-        Debug.Log(jetPackCurrentFuelTime);
     }
 
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("collision");
         if (collision.gameObject.tag == "Surfboard")
         {
             jetPackCurrentFuelTime = jetPackFuelTime;
