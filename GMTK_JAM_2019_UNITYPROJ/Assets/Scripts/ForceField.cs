@@ -10,7 +10,7 @@ public class ForceField : MonoBehaviour
     {
         Collider[] colliders = objectToIgnore.GetComponents<Collider>();
 
-        foreach(Collider collider in colliders)
+        foreach (Collider collider in colliders)
             Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), collider);
     }
 }
