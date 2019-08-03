@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: difusa_satelite
+  m_Name: drink_texture
   m_Shader: {fileID: 4800000, guid: 4702b775edbceaa45a6dd69698b2a0e6, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f14c5969dcc77c8448f94db110331620, type: 3}
+        m_Texture: {fileID: 2800000, guid: ec3e196950dc79346a197f57fd4a7f28, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -59,12 +59,12 @@ Material:
     - _BumpScale: 1
     - _ColorRamp0: 1
     - _ColorRamp1: 0.5
-    - _ColorRamp2: 0.67
+    - _ColorRamp2: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 10
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
@@ -74,10 +74,10 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _UseSpecular: 0.65
+    - _UseSpecular: 0
     - _UseVertexColor: 0
     - _ZWrite: 1
     m_Colors:
-    - _AmbientColor: {r: 0, g: 0, b: 0, a: 1}
+    - _AmbientColor: {r: 0.4, g: 0.4, b: 0.6, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
