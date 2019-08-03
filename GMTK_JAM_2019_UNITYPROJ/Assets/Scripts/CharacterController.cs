@@ -5,10 +5,13 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     [SerializeField][Tooltip("Velocidad de movimiento horizontal")] float horizontalSpeed = 2.0f;
-
+    [Space]
     [SerializeField][Tooltip("Velocidad del JetPack")] float jetPackSpeed = 4.0f;
     [SerializeField][Tooltip("Segundos que dura el combustible del JetPack")] float jetPackFuelTime = 6.0f;
-
+    [Space]
+    [SerializeField] float rotationMaxAngle = 20f;
+    [SerializeField] float rotationSpeed = 1f;
+    
     float jetPackCurrentFuelTime;
 
     float jetPackStartTime = 0f;
@@ -22,10 +25,11 @@ public class CharacterController : MonoBehaviour
 
     void Start()
     {
+        gameObject.tag = "Player";
+
         surfboard = FindObjectOfType<SurfboardController>();
 
         rigidbody = GetComponent<Rigidbody>();
-        gameObject.tag = "Player";
 
         defaultMass = rigidbody.mass;
 
@@ -41,6 +45,15 @@ public class CharacterController : MonoBehaviour
     void HorizontalMovement()
     {
         rigidbody.velocity += (Input.GetAxisRaw("Horizontal") * transform.right * horizontalSpeed) * Time.deltaTime;
+
+        if(Input.GetAxisRaw("Horizontal") > 0)
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, -rotationMaxAngle, 0f), rotationSpeed);
+
+        else if (Input.GetAxisRaw("Horizontal") < 0)
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, rotationMaxAngle, 0f), rotationSpeed);
+
+        else transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, 0f), rotationSpeed);
+
     }
 
     void JetPackMovement()
@@ -64,7 +77,6 @@ public class CharacterController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("collision");
         if (collision.gameObject.tag == "Surfboard")
         {
             jetPackCurrentFuelTime = jetPackFuelTime;

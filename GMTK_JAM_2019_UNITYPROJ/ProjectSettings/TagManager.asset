@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Surfboard
+  - Button
   layers:
   - Default
   - TransparentFX
