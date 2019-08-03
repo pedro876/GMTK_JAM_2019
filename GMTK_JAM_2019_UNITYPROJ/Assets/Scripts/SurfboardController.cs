@@ -6,6 +6,7 @@ public class SurfboardController : MonoBehaviour
 {
     Rigidbody rigidbody;
 
+    [HideInInspector] public static bool canMove = true;
     [SerializeField][Tooltip("Fuerza con la que la tabla va hacia el cursor")] float force = 1.0f;
     [SerializeField][Tooltip("Porcentaje de velocidad que pierde la tabla cada frame")] float decelerationFactor = 0.1f;
     [SerializeField][Tooltip("Velocidad tope de la tabla")] float topSpeed = 10;
@@ -27,13 +28,16 @@ public class SurfboardController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        mouseVector = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0f);
+        if (canMove)
+        {
+            mouseVector = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0f);
 
-        rigidbody.AddForce(mouseVector * force * Time.deltaTime, ForceMode.Acceleration);
+            rigidbody.AddForce(mouseVector * force * Time.deltaTime, ForceMode.Acceleration);
 
-        rigidbody.velocity -= rigidbody.velocity * decelerationFactor;
+            rigidbody.velocity -= rigidbody.velocity * decelerationFactor;
 
-        if (rigidbody.velocity.magnitude > topSpeed)
-            rigidbody.velocity = rigidbody.velocity.normalized * topSpeed;
+            if (rigidbody.velocity.magnitude > topSpeed)
+                rigidbody.velocity = rigidbody.velocity.normalized * topSpeed;
+        }
     }
 }
