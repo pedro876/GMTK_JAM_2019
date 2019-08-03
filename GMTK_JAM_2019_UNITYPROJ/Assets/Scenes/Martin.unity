@@ -1794,6 +1794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 4639930365437419148, guid: 9b5843d1caa62de49a754265cb8be289,
     type: 3}
+  jetPackVFX: {fileID: 0}
   horizontalSpeed: 8
   minRotationInput: 1
   jetPackSpeed: 20

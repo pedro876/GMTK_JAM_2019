@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class CharacterController : MonoBehaviour
 {
     [SerializeField] ParticleSystem deathVFX;
+    [SerializeField] ParticleSystem [] jetPackVFXs;
+    [Space]
 
     [HideInInspector] public static bool canWin = false;
     [HideInInspector] public static bool canMove = true;
@@ -97,6 +99,9 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetButton("Jump"))
         {
+            foreach(ParticleSystem jetPackVFX in jetPackVFXs)
+                if(!jetPackVFX.isPlaying) jetPackVFX.Play();
+
             jetPackElapsedTime = Time.time - jetPackStartTime;
 
             if (jetPackElapsedTime < jetPackCurrentFuelTime)
@@ -108,6 +113,9 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetButtonUp("Jump"))
         {
+            foreach (ParticleSystem jetPackVFX in jetPackVFXs)
+                jetPackVFX.Stop();
+
             jetPackCurrentFuelTime -= jetPackElapsedTime;
             fuelBarUICurrentHeight = jetPackFuelBarUI.rectTransform.sizeDelta.y;
         }
