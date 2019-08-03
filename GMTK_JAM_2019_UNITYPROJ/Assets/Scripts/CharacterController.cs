@@ -109,6 +109,8 @@ public class CharacterController : MonoBehaviour
                 rigidbody.velocity += transform.up * jetPackSpeed * Time.deltaTime;
                 UpdateFuelUI();
             }
+
+            else foreach (ParticleSystem jetPackVFX in jetPackVFXs) jetPackVFX.Stop();
         }
 
         if (Input.GetButtonUp("Jump"))
