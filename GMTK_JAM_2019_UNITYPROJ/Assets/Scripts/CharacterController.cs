@@ -123,4 +123,16 @@ public class CharacterController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Surfboard") rigidbody.mass = defaultMass;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Portal")
+        {
+            jetPackCurrentFuelTime = jetPackFuelTime;
+
+            jetPackFuelBarUI.rectTransform.sizeDelta = new Vector2(jetPackFuelBarUI.rectTransform.sizeDelta.x, fuelBarUIDefaultHeight);
+            fuelBarUICurrentHeight = jetPackFuelBarUI.rectTransform.sizeDelta.y;
+        }
+    }
+
 }
