@@ -15,6 +15,7 @@ public class Portal : MonoBehaviour
             other.transform.position = destinationPortal.transform.position;
             destinationPortal.canTeleport = false;
             if (!destinationPortal.teleportVFX.isPlaying) destinationPortal.teleportVFX.Play();
+            if (!destinationPortal.GetComponent<AudioSource>().isPlaying) destinationPortal.GetComponent<AudioSource>().Play();
         }
     }
 

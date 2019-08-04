@@ -23,7 +23,7 @@ public class CharacterController : MonoBehaviour
 
     [SerializeField] float rotationMaxAngle = 20f;
     [SerializeField] float rotationSpeed = 1f;
-    
+
     float jetPackCurrentFuelTime;
     
     float jetPackStartTime = 0f;
@@ -181,8 +181,11 @@ public class CharacterController : MonoBehaviour
 
         sceneTransition.ReloadScene();
 
+        FindObjectOfType<AudioController>().playDeath();
+
         Destroy(surfboard.gameObject);
         Destroy(gameObject);
+        
     }
 
 }

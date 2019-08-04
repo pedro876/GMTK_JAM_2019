@@ -1508,6 +1508,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smoke (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 275689280885330888, guid: 70481e2bece26d24c98edf6abc8b12cb,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4632246589768881814, guid: 70481e2bece26d24c98edf6abc8b12cb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1561,11 +1566,6 @@ PrefabInstance:
     - target: {fileID: 4632246589768881814, guid: 70481e2bece26d24c98edf6abc8b12cb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 275689280885330888, guid: 70481e2bece26d24c98edf6abc8b12cb,
-        type: 3}
-      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
