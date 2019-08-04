@@ -220,6 +220,43 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &145091745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4793250549157294282, guid: 0eddae57f638e864dacc347f9bb5e192,
+    type: 3}
+  m_PrefabInstance: {fileID: 1492083898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &145091746
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145091745}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 30f9bfed254b16447b55ca2775a25e8c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &145091747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145091745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15cea92faabe6942989fc1983892eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &258982683
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 381791744}
+  volumeTrigger: {fileID: 730165230}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1517,8 +1554,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 79, y: -233}
-  m_SizeDelta: {x: 987.6, y: 427.3}
+  m_AnchoredPosition: {x: 79, y: -247}
+  m_SizeDelta: {x: 987.6, y: 482}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1609066197
 MonoBehaviour:
@@ -1555,7 +1592,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Alejandro Rodr\xEDguez - Many sound effects\nFreepik - Mouse icon\nMobeyee
     Sounds - Portal sound\nUSE-Mediengestaltung - NASA font\nDaniel Zadorozny - NRG
-    font\nShalpin - Background music"
+    font\nShalpin - Credits music\nKenney - Mouse cursor"
 --- !u!222 &1609066198
 CanvasRenderer:
   m_ObjectHideFlags: 0
