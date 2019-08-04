@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7150794441998237538}
   - component: {fileID: 3458818131620758427}
   - component: {fileID: 8787208864002093700}
+  - component: {fileID: -3733804696600961482}
   m_Layer: 0
   m_Name: asteroid1
   m_TagString: Untagged
@@ -92,3 +93,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.3255142
   m_Center: {x: -0.024424076, y: 0.007838845, z: -0.01365}
+--- !u!114 &-3733804696600961482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2899446038605444935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0596398ede60c834e848319a05556bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localAxis: {x: 1, y: 0, z: 1}
+  speed: 15

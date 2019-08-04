@@ -1,0 +1,14 @@
+portal
+https://opengameart.org/content/laser-shot-0
+
+fuente nasa
+https://www.dafont.com/es/nasa21.font
+
+fuente n r g
+https://www.dafont.com/es/mrs-monster.font
+
+mouse icon 
+https://www.flaticon.com/free-icon/computer-mouse_30
+
+musica
+https://opengameart.org/content/western
