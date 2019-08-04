@@ -5,6 +5,7 @@ using UnityEngine;
 public class Portal : MonoBehaviour
 {
     [SerializeField] Portal destinationPortal;
+    [SerializeField] ParticleSystem teleportVFX;
     bool canTeleport = true;
 
     void OnTriggerEnter(Collider other)
@@ -13,6 +14,7 @@ public class Portal : MonoBehaviour
         {
             other.transform.position = destinationPortal.transform.position;
             destinationPortal.canTeleport = false;
+            if (!destinationPortal.teleportVFX.isPlaying) destinationPortal.teleportVFX.Play();
         }
     }
 

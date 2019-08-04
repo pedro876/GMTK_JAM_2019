@@ -4766,7 +4766,7 @@ GameObject:
   - component: {fileID: 2698248397849956056}
   m_Layer: 9
   m_Name: Particle System
-  m_TagString: Untagged
+  m_TagString: KillsPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

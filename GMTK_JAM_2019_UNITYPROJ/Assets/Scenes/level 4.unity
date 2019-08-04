@@ -4072,6 +4072,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Purple BlackHole
       objectReference: {fileID: 0}
+    - target: {fileID: 2170581831192687689, guid: fd9505aaa32171142a86a48ddf2435ec,
+        type: 3}
+      propertyPath: destinationPortal
+      value: 
+      objectReference: {fileID: 1024230261}
     - target: {fileID: 5745109312401415959, guid: fd9505aaa32171142a86a48ddf2435ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4127,11 +4132,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2170581831192687689, guid: fd9505aaa32171142a86a48ddf2435ec,
-        type: 3}
-      propertyPath: destinationPortal
-      value: 
-      objectReference: {fileID: 1024230261}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd9505aaa32171142a86a48ddf2435ec, type: 3}
 --- !u!1001 &1427854502
