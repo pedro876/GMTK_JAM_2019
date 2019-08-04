@@ -37,4 +37,14 @@ public class SceneTransitionManager : MonoBehaviour
     {
         StartCoroutine(TransitionToScene(SceneManager.GetActiveScene().name));
     }
+
+    public void LoadNextSceneWithoutTransition()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
