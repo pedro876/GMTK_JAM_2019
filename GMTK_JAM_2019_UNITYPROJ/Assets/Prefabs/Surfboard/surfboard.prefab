@@ -96,7 +96,7 @@ Rigidbody:
   m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 2
   m_Constraints: 120
   m_CollisionDetection: 2
 --- !u!65 &1990565459
@@ -134,6 +134,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6835382514872580905}
     m_Modifications:
+    - target: {fileID: 4044034817834669993, guid: 947f40378dcd0004e85f33fa2671df5d,
+        type: 3}
+      propertyPath: m_Name
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044034817834669993, guid: 947f40378dcd0004e85f33fa2671df5d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4044034817834669996, guid: 947f40378dcd0004e85f33fa2671df5d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -188,16 +198,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4044034817834669993, guid: 947f40378dcd0004e85f33fa2671df5d,
-        type: 3}
-      propertyPath: m_Name
-      value: Fire
-      objectReference: {fileID: 0}
-    - target: {fileID: 4044034817834669993, guid: 947f40378dcd0004e85f33fa2671df5d,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4044034817834669995, guid: 947f40378dcd0004e85f33fa2671df5d,
         type: 3}
@@ -369,6 +369,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6835382514872580905}
     m_Modifications:
+    - target: {fileID: 4044034817834669993, guid: 947f40378dcd0004e85f33fa2671df5d,
+        type: 3}
+      propertyPath: m_Name
+      value: Fire (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044034817834669993, guid: 947f40378dcd0004e85f33fa2671df5d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4044034817834669996, guid: 947f40378dcd0004e85f33fa2671df5d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -423,16 +433,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4044034817834669993, guid: 947f40378dcd0004e85f33fa2671df5d,
-        type: 3}
-      propertyPath: m_Name
-      value: Fire (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4044034817834669993, guid: 947f40378dcd0004e85f33fa2671df5d,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4044034817834669995, guid: 947f40378dcd0004e85f33fa2671df5d,
         type: 3}
