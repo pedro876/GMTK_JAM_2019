@@ -176,7 +176,7 @@ public class CharacterController : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        if (other.gameObject.tag == "KillsPlayer") DeathSequence();
+        if (other.gameObject.tag == "KillsPlayer" || other.gameObject.tag == "Button") DeathSequence();
     }
 
     void DeathSequence()

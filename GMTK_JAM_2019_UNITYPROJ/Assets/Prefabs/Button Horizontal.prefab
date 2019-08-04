@@ -266,6 +266,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: buttonBase_prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 2520824234131547489, guid: 2f96d645b4bffde43a2c87737ce2e75b,
+        type: 3}
+      propertyPath: m_TagString
+      value: KillsPlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 1486361119219881842, guid: 2f96d645b4bffde43a2c87737ce2e75b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -343,11 +348,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2076995647, guid: 2f96d645b4bffde43a2c87737ce2e75b, type: 3}
       propertyPath: m_Damper
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2076995647, guid: 2f96d645b4bffde43a2c87737ce2e75b, type: 3}
       propertyPath: m_Spring
-      value: 10
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076995647, guid: 2f96d645b4bffde43a2c87737ce2e75b, type: 3}
+      propertyPath: m_MinDistance
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2076995651, guid: 2f96d645b4bffde43a2c87737ce2e75b, type: 3}
       propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.size
@@ -573,6 +582,18 @@ PrefabInstance:
       propertyPath: OnUp.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2076995645, guid: 2f96d645b4bffde43a2c87737ce2e75b, type: 3}
+      propertyPath: m_Size.z
+      value: 0.0024248725
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076995645, guid: 2f96d645b4bffde43a2c87737ce2e75b, type: 3}
+      propertyPath: m_Center.y
+      value: 0.0022986946
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076995645, guid: 2f96d645b4bffde43a2c87737ce2e75b, type: 3}
+      propertyPath: m_Center.z
+      value: -0.011057923
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f96d645b4bffde43a2c87737ce2e75b, type: 3}
 --- !u!1 &296682607391972987 stripped
@@ -755,10 +776,20 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 8220087886004356606, guid: 418448f3964722742b3083125401a87a,
+        type: 3}
+      propertyPath: m_TagString
+      value: KillsPlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 8220087885398525521, guid: 418448f3964722742b3083125401a87a,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220087885398525521, guid: 418448f3964722742b3083125401a87a,
+        type: 3}
+      propertyPath: m_TagString
+      value: KillsPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 418448f3964722742b3083125401a87a, type: 3}
