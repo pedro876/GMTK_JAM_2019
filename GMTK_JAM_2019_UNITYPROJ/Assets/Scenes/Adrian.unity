@@ -357,6 +357,10 @@ PrefabInstance:
       propertyPath: jetPackFuelBarUI
       value: 
       objectReference: {fileID: 96214156}
+    - target: {fileID: 247249090, guid: 4d9576144555b144f97db62e53576a08, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8270247275239446776, guid: 4d9576144555b144f97db62e53576a08,
         type: 3}
       propertyPath: Loop
@@ -504,7 +508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &820511567
 RectTransform:
   m_ObjectHideFlags: 0
@@ -830,6 +834,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990565458, guid: 1e6c0de74608cd645a01f2d0496c9d01, type: 3}
+      propertyPath: m_Constraints
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990565459, guid: 1e6c0de74608cd645a01f2d0496c9d01, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e6c0de74608cd645a01f2d0496c9d01, type: 3}
