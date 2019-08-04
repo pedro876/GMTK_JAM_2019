@@ -38,8 +38,14 @@ public class SceneTransitionManager : MonoBehaviour
         StartCoroutine(TransitionToScene(SceneManager.GetActiveScene().name));
     }
 
-    public void LoadNextSceneWithoutTransition()
+    public void LoadNextSceneWithoutFading(float Time)
     {
+        StartCoroutine(TransitionToNextSceneWithoutFading(Time));
+    }
+
+    IEnumerator TransitionToNextSceneWithoutFading(float Time)
+    {
+        yield return new WaitForSecondsRealtime(Time);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
