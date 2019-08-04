@@ -1813,6 +1813,11 @@ PrefabInstance:
       propertyPath: topSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 1990565459, guid: 1e6c0de74608cd645a01f2d0496c9d01, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 27b9d07a81ba0514cb7bcb0a91be6747,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e6c0de74608cd645a01f2d0496c9d01, type: 3}
 --- !u!1001 &475022962
