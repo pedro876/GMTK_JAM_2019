@@ -6,6 +6,9 @@ public class PlayCreditsMusic : MonoBehaviour
 {
     private void Awake()
     {
-        FindObjectOfType<GameMusic>().GetComponent<AudioSource>().Stop();
+        GameMusic gameMusic = FindObjectOfType<GameMusic>();
+
+        if(gameMusic != null)
+            gameMusic.GetComponent<AudioSource>().Stop();
     }
 }
