@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DontDestoyOnLoad : MonoBehaviour
+public class GameMusic : MonoBehaviour
 {
     void Awake()
     {
