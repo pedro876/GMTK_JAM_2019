@@ -27,9 +27,9 @@ Material:
     - _ColorRamp0: 1
     - _ColorRamp1: 0.5
     - _ColorRamp2: 0
-    - _Glossiness: 32
-    - _UseSpecular: 0
+    - _Glossiness: 30
+    - _UseSpecular: 0.795
     - _UseVertexColor: 0
     m_Colors:
-    - _AmbientColor: {r: 0.4, g: 0.4, b: 0.6, a: 1}
+    - _AmbientColor: {r: 0.21635813, g: 0.21635813, b: 0.3207547, a: 1}
     - _Color: {r: 0.5, g: 0.65, b: 1, a: 1}
