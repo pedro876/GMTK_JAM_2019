@@ -63,7 +63,7 @@ public class CharacterController : MonoBehaviour
         {
             HorizontalMovement();
             JetPackMovement();
-            if (Input.GetKey(KeyCode.Escape)) Application.Quit();
+            if (Input.GetKey(KeyCode.Escape)) sceneTransition.LoadScene("MainMenu");
         }
     }
 
@@ -186,7 +186,5 @@ public class CharacterController : MonoBehaviour
 
         Destroy(surfboard.gameObject);
         Destroy(gameObject);
-        
     }
-
 }
