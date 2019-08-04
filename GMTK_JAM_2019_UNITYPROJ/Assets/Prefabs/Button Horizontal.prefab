@@ -343,11 +343,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2076995647, guid: 2f96d645b4bffde43a2c87737ce2e75b, type: 3}
       propertyPath: m_Damper
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2076995647, guid: 2f96d645b4bffde43a2c87737ce2e75b, type: 3}
       propertyPath: m_Spring
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2076995651, guid: 2f96d645b4bffde43a2c87737ce2e75b, type: 3}
       propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.size

@@ -616,10 +616,10 @@ MonoBehaviour:
     m_Bits: 4294967295
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
-  antialiasingMode: 0
+  antialiasingMode: 1
   temporalAntialiasing:
     jitterSpread: 0.75
-    sharpness: 0.25
+    sharpness: 1.09
     stationaryBlending: 0.95
     motionBlending: 0.85
   subpixelMorphologicalAntialiasing:
@@ -2595,7 +2595,7 @@ Transform:
   - {fileID: 4305211273633290127}
   - {fileID: 6906012076297277794}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 47.735, z: -18.390001}
 --- !u!114 &3297913684752629643
 MonoBehaviour:
