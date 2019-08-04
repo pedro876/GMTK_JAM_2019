@@ -40,6 +40,8 @@ public class CharacterController : MonoBehaviour
     SurfboardController surfboard;
     AudioSource ohYeah;
 
+    bool canFly = true;
+
     void Start()
     {
         gameObject.tag = "Player";
@@ -66,7 +68,10 @@ public class CharacterController : MonoBehaviour
             HorizontalMovement();
             JetPackMovement();
             if (Input.GetKey(KeyCode.Escape)) sceneTransition.LoadScene("MainMenu");
+            else if (Input.GetKey(KeyCode.R)) sceneTransition.ReloadScene();
         }
+
+        Debug.Log(jetPackCurrentFuelTime);
     }
 
     void HorizontalMovement()
@@ -163,15 +168,19 @@ public class CharacterController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Portal") RechargeJetPack();
-
-        else if(other.gameObject.tag == "Goal")
+        if (other.gameObject.tag == "Goal")
         {
             canWin = true;
             Instantiate(satelliteVFX, other.transform.position, Quaternion.identity);
             if (!ohYeah.isPlaying) ohYeah.Play();
             Destroy(other.gameObject);
         }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Portal")
+            RechargeJetPack();
     }
 
     private void OnParticleCollision(GameObject other)

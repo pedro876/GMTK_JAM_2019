@@ -12,10 +12,13 @@ public class Portal : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && canTeleport)
         {
-            other.transform.position = destinationPortal.transform.position;
-            destinationPortal.canTeleport = false;
-            if (!destinationPortal.teleportVFX.isPlaying) destinationPortal.teleportVFX.Play();
-            if (!destinationPortal.GetComponent<AudioSource>().isPlaying) destinationPortal.GetComponent<AudioSource>().Play();
+            if (destinationPortal != null)
+            {
+                other.transform.position = destinationPortal.transform.position;
+                destinationPortal.canTeleport = false;
+                if (!destinationPortal.teleportVFX.isPlaying) destinationPortal.teleportVFX.Play();
+                if (!destinationPortal.GetComponent<AudioSource>().isPlaying) destinationPortal.GetComponent<AudioSource>().Play();
+            }
         }
     }
 
