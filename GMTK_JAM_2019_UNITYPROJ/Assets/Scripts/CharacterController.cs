@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CharacterController : MonoBehaviour
 {
     [SerializeField] ParticleSystem deathVFX;
+    [SerializeField] GameObject satelliteVFX;
     [SerializeField] ParticleSystem [] jetPackVFXs;
     [Space]
 
@@ -37,6 +38,7 @@ public class CharacterController : MonoBehaviour
     Rigidbody rigidbody;
     SceneTransitionManager sceneTransition;
     SurfboardController surfboard;
+    AudioSource ohYeah;
 
     void Start()
     {
@@ -45,6 +47,7 @@ public class CharacterController : MonoBehaviour
         surfboard = FindObjectOfType<SurfboardController>();
         rigidbody = GetComponent<Rigidbody>();
         sceneTransition = FindObjectOfType<SceneTransitionManager>();
+        ohYeah = GetComponent<AudioSource>();
 
         fuelBarUIDefaultHeight = jetPackFuelBarUI.rectTransform.sizeDelta.y;
 
@@ -165,6 +168,8 @@ public class CharacterController : MonoBehaviour
         else if(other.gameObject.tag == "Goal")
         {
             canWin = true;
+            Instantiate(satelliteVFX, other.transform.position, Quaternion.identity);
+            if (!ohYeah.isPlaying) ohYeah.Play();
             Destroy(other.gameObject);
         }
     }
