@@ -1105,17 +1105,17 @@ PrefabInstance:
     - target: {fileID: 4176537730504836064, guid: a9e43feaf76762246bd0f7af65d659c9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.627335
+      value: -24.3
       objectReference: {fileID: 0}
     - target: {fileID: 4176537730504836064, guid: a9e43feaf76762246bd0f7af65d659c9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.98074055
+      value: -2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4176537730504836064, guid: a9e43feaf76762246bd0f7af65d659c9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -23.344963
+      value: -24.2
       objectReference: {fileID: 0}
     - target: {fileID: 4176537730504836064, guid: a9e43feaf76762246bd0f7af65d659c9,
         type: 3}
@@ -1694,8 +1694,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 79, y: -247}
-  m_SizeDelta: {x: 987.6, y: 482}
+  m_AnchoredPosition: {x: 79, y: -291}
+  m_SizeDelta: {x: 987.6, y: 546.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1609066197
 MonoBehaviour:
@@ -1732,7 +1732,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Alejandro Rodr\xEDguez - Many sound effects\nFreepik - Mouse icon\nMobeyee
     Sounds - Portal sound\nUSE-Mediengestaltung - NASA font\nDaniel Zadorozny - NRG
-    font\nShalpin - Credits music\nKenney - Mouse cursor"
+    font\nShalpin - Credits music\nKenney - Mouse cursor\nn3b - Oh yeah sound effect"
 --- !u!222 &1609066198
 CanvasRenderer:
   m_ObjectHideFlags: 0
