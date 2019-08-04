@@ -2357,6 +2357,14 @@ PrefabInstance:
       propertyPath: horizontalSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 247249091, guid: 4d9576144555b144f97db62e53576a08, type: 3}
+      propertyPath: rotationMaxAngle
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 247249090, guid: 4d9576144555b144f97db62e53576a08, type: 3}
+      propertyPath: m_Constraints
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d9576144555b144f97db62e53576a08, type: 3}
 --- !u!1 &839399154 stripped
