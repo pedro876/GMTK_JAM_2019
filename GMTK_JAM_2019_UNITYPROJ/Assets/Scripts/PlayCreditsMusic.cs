@@ -11,4 +11,9 @@ public class PlayCreditsMusic : MonoBehaviour
         if(gameMusic != null)
             gameMusic.GetComponent<AudioSource>().Stop();
     }
+
+    private void Update()
+    {
+        Cursor.visible = true;
+    }
 }

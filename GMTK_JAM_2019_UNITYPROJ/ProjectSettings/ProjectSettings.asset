@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: GMTK_JAM_2019_UNITYPROJ
+  companyName: Team4Team
+  productName: Only Juan In Space
   defaultCursor: {fileID: 2800000, guid: 576d97a1ef6d6394197d80379438abb6, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -42,7 +42,7 @@ PlayerSettings:
   m_SplashScreenLogos:
   - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
     duration: 2
-  - logo: {fileID: 21300000, guid: ba0dbd384d9d25d439fd3431356ee30f, type: 3}
+  - logo: {fileID: 21300000, guid: 5355b273a45b54148987f53a0eaccf71, type: 3}
     duration: 5
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
