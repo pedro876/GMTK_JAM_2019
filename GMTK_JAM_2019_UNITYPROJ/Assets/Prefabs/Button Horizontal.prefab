@@ -675,6 +675,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2004529114, guid: 4098c51702a1eed4d902cdbf8114ed6d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.019570427
+      objectReference: {fileID: 0}
+    - target: {fileID: 2004529114, guid: 4098c51702a1eed4d902cdbf8114ed6d, type: 3}
+      propertyPath: m_Center.x
+      value: -0.00004622221
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4098c51702a1eed4d902cdbf8114ed6d, type: 3}
 --- !u!4 &3503350641615480492 stripped
@@ -779,7 +787,7 @@ PrefabInstance:
     - target: {fileID: 8220087886004356606, guid: 418448f3964722742b3083125401a87a,
         type: 3}
       propertyPath: m_TagString
-      value: KillsPlayer
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8220087885398525521, guid: 418448f3964722742b3083125401a87a,
         type: 3}
@@ -789,7 +797,12 @@ PrefabInstance:
     - target: {fileID: 8220087885398525521, guid: 418448f3964722742b3083125401a87a,
         type: 3}
       propertyPath: m_TagString
-      value: KillsPlayer
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220087886080642288, guid: 418448f3964722742b3083125401a87a,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 418448f3964722742b3083125401a87a, type: 3}
