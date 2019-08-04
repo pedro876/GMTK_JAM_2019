@@ -412,7 +412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -142, y: 139.89}
+  m_AnchoredPosition: {x: -142, y: 146.8}
   m_SizeDelta: {x: 702.2, y: 201.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &349562673
@@ -1258,17 +1258,17 @@ PrefabInstance:
     - target: {fileID: 4176537730504836064, guid: a9e43feaf76762246bd0f7af65d659c9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.3
+      value: -24.11
       objectReference: {fileID: 0}
     - target: {fileID: 4176537730504836064, guid: a9e43feaf76762246bd0f7af65d659c9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3
+      value: -3.04
       objectReference: {fileID: 0}
     - target: {fileID: 4176537730504836064, guid: a9e43feaf76762246bd0f7af65d659c9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.2
+      value: -24.67
       objectReference: {fileID: 0}
     - target: {fileID: 4176537730504836064, guid: a9e43feaf76762246bd0f7af65d659c9,
         type: 3}
@@ -1414,7 +1414,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -142, y: 81.935}
+  m_AnchoredPosition: {x: -142, y: 28}
   m_SizeDelta: {x: 582.1, y: 300.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1423387338
@@ -1680,17 +1680,17 @@ PrefabInstance:
     - target: {fileID: 2759084836973694280, guid: a2a0f49d14215f740a9f17e7780097e7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.14
+      value: 5.6
       objectReference: {fileID: 0}
     - target: {fileID: 2759084836973694280, guid: a2a0f49d14215f740a9f17e7780097e7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.52
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 2759084836973694280, guid: a2a0f49d14215f740a9f17e7780097e7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.36
+      value: -20.3
       objectReference: {fileID: 0}
     - target: {fileID: 2759084836973694280, guid: a2a0f49d14215f740a9f17e7780097e7,
         type: 3}
@@ -1847,8 +1847,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 79, y: -291}
-  m_SizeDelta: {x: 987.6, y: 546.8}
+  m_AnchoredPosition: {x: 79, y: -315}
+  m_SizeDelta: {x: 987.6, y: 615.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1609066197
 MonoBehaviour:
@@ -1883,9 +1883,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Alejandro Rodr\xEDguez - Many sound effects\nFreepik - Mouse icon\nMobeyee
-    Sounds - Portal sound\nUSE-Mediengestaltung - NASA font\nDaniel Zadorozny - NRG
-    font\nShalpin - Credits music\nKenney - Mouse cursor\nn3b - Oh yeah sound effect"
+  m_Text: "Alejandro Rodr\xEDguez - Many sound effects\nOtis McDonald - Backround
+    song\nFreepik - Mouse icon\nMobeyee Sounds - Portal sound\nUSE-Mediengestaltung
+    - NASA font\nDaniel Zadorozny - NRG font\nShalpin - Credits and menu song\nKenney
+    - Mouse cursor\nn3b - Oh yeah sound effect"
 --- !u!222 &1609066198
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2587,7 +2588,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3297913684752629641}
   m_LocalRotation: {x: -0.064656, y: 0.39942175, z: -0.14612907, w: 0.90273374}
-  m_LocalPosition: {x: -33.7, y: -0.7, z: -4.4}
+  m_LocalPosition: {x: 16.4, y: 34.4, z: 28.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4135455189958106443}
