@@ -180,6 +180,7 @@
 					float4 vertex : POSITION;
 					float4 uv : TEXCOORD0;
 					float3 normal : NORMAL;
+					float4 color : COLOR;
 				};
 			
 				struct vertexOutput { //v2f
@@ -188,6 +189,7 @@
 					float4 posWorld : TEXCOORD4;
 					float3 viewDir : TEXCOORD2;
 					float3 worldNormal : NORMAL;
+					float4 color : COLOR;
 					LIGHTING_COORDS(0,1)
 					//SHADOW_COORDS(2)
 				};
@@ -206,6 +208,7 @@
 					OUT.pos = UnityObjectToClipPos(v.vertex);
 					OUT.uv = TRANSFORM_TEX(v.uv, _MainTex);
 					OUT.worldNormal = UnityObjectToWorldNormal(v.normal);
+					OUT.color = v.color;
 					OUT.viewDir = WorldSpaceViewDir(v.vertex);
 					//TRANSFER_SHADOW(OUT)
 					//vertexInput v = IN;
@@ -230,6 +233,7 @@
 				//uniform float4 _LightColor0;
 				uniform float _Glossiness;
 				uniform float _UseSpecular;
+				uniform float _UseVertexColor;
 				uniform float _ColorRamp0;
 				uniform float _ColorRamp1;
 				uniform float _ColorRamp2;
@@ -292,7 +296,9 @@
 					//return sample * LIGHT_ATTENUATION(IN);
 					//return tex2D(_ShadowMapTexture, IN.uv);
 
-					float4 finalColor = (sample * _Color * finalLight * _LightColor0/(colIntensity/2) /*+ sample * _AmbientColor *(1 - finalLight)*/);
+					float4 usingColor2 = sample * (1 - _UseVertexColor) + IN.color * _UseVertexColor;
+
+					float4 finalColor = (usingColor2 * _Color * finalLight * _LightColor0/(colIntensity/2) /*+ sample * _AmbientColor *(1 - finalLight)*/);
 					return finalColor;
 				}
 				ENDCG

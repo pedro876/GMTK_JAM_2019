@@ -287,7 +287,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1423387341}
   - component: {fileID: 1423387340}
-  - component: {fileID: 1423387339}
   m_Layer: 0
   m_Name: back cam
   m_TagString: Untagged
@@ -295,14 +294,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1423387339
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1423387338}
-  m_Enabled: 0
 --- !u!20 &1423387340
 Camera:
   m_ObjectHideFlags: 0
