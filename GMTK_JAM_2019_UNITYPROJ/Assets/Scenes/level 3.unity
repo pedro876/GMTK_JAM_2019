@@ -486,6 +486,21 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6122183460146839405, guid: cb7e5eb1186b48e47bb582bcdc6384c7,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122183460222072417, guid: cb7e5eb1186b48e47bb582bcdc6384c7,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122183460823840202, guid: cb7e5eb1186b48e47bb582bcdc6384c7,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.82
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb7e5eb1186b48e47bb582bcdc6384c7, type: 3}
 --- !u!1001 &207165047
