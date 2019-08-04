@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6376764842044087529}
   m_Layer: 0
   m_Name: Blue BlackHole
-  m_TagString: Untagged
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
