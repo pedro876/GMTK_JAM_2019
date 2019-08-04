@@ -857,7 +857,7 @@ MonoBehaviour:
   horizontalSpeed: 10
   minRotationInput: 0.5
   jetPackSpeed: 20
-  jetPackFuelTime: 3
+  jetPackFuelTime: 4
   jetPackFuelBarUI: {fileID: 0}
   rotationMaxAngle: 20
   rotationSpeed: 1
@@ -1602,6 +1602,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 26260851938669283}
     m_Modifications:
+    - target: {fileID: 275689280885330888, guid: 70481e2bece26d24c98edf6abc8b12cb,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 315535413138442458, guid: 70481e2bece26d24c98edf6abc8b12cb,
         type: 3}
       propertyPath: m_Name
@@ -1660,11 +1665,6 @@ PrefabInstance:
     - target: {fileID: 4632246589768881814, guid: 70481e2bece26d24c98edf6abc8b12cb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 275689280885330888, guid: 70481e2bece26d24c98edf6abc8b12cb,
-        type: 3}
-      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
