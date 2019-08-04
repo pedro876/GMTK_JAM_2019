@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6679015622306921246}
   - component: {fileID: 2444231860305019176}
   - component: {fileID: 8275133993560030673}
-  - component: {fileID: 5072369407685645067}
   - component: {fileID: 8947257115946365020}
+  - component: {fileID: 1426509961}
   m_Layer: 10
   m_Name: endModule
   m_TagString: KillsPlayer
@@ -80,19 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5072369407685645067
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7704524862348691725}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.019999996, z: 0.009999998}
-  m_Center: {x: 0, y: 0, z: 0.004999999}
 --- !u!114 &8947257115946365020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,3 +93,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridSize: 2
+--- !u!64 &1426509961
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7704524862348691725}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 6411521324666846712, guid: c0cc5364ef3d77c4c9ec95cb59ff47cc, type: 3}
