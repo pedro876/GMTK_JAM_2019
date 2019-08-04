@@ -476,10 +476,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 2802860794918046501, guid: cb7e5eb1186b48e47bb582bcdc6384c7,
+    - target: {fileID: 2802860794532636449, guid: cb7e5eb1186b48e47bb582bcdc6384c7,
         type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: 0.03397743
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802860794532636449, guid: cb7e5eb1186b48e47bb582bcdc6384c7,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb7e5eb1186b48e47bb582bcdc6384c7, type: 3}

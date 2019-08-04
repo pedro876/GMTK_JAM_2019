@@ -38,7 +38,6 @@ public class CharacterController : MonoBehaviour
     SceneTransitionManager sceneTransition;
     SurfboardController surfboard;
 
-
     void Start()
     {
         gameObject.tag = "Player";

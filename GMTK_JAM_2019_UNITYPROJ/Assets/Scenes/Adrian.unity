@@ -357,7 +357,13 @@ PrefabInstance:
       propertyPath: jetPackFuelBarUI
       value: 
       objectReference: {fileID: 96214156}
-    m_RemovedComponents: []
+    - target: {fileID: 8270247275239446776, guid: 4d9576144555b144f97db62e53576a08,
+        type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8270247275239446776, guid: 4d9576144555b144f97db62e53576a08, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4d9576144555b144f97db62e53576a08, type: 3}
 --- !u!1 &489358442
 GameObject:
