@@ -63,6 +63,7 @@ public class CharacterController : MonoBehaviour
         {
             HorizontalMovement();
             JetPackMovement();
+            if (Input.GetKey(KeyCode.Escape)) Application.Quit();
         }
     }
 
